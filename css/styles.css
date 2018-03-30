@@ -1,0 +1,73 @@
+body{
+    margin:0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5 {
+    margin: 0;
+    padding: 0;
+}
+header {
+    text-align: center;
+    background: darkslategrey;
+    color: white;
+    padding: 1em;
+}
+.main-area {
+
+}
+
+.centered {
+    width: 80%;
+    margin: 1em auto;
+}
+
+.menu-section {
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-heading {
+    text-align: center;
+    color: white;
+    background-color: gray;
+    padding: .5em;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background: hsl(0, 0%, 15%);
+}
+
+.menu li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: .6em 1em;
+}
+
+.menu li a:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 25%);
+}
+
+/* Single nav Styles */
+.single-nav ul {
+    text-align: center;
+}
+
+@media screen and (min-width: 30em) {
+    /* Single nav Styles */
+    .single-nav ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .single-nav li {
+        flex: 1 0 auto;
+        text-align: center;
+    }
+}
