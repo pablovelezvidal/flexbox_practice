@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./styles.css">
+    <script src="./js/multilevel.js" defer type="text/javascript"></script>
     <title>Document</title>
 </head>
 
@@ -86,6 +87,36 @@
                                     <span>This is the new text</span>
                                 </div>
                             </a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="menu-section">
+                <h2 class="menu-heading">Multilevel (Drop Down) Level Menu</h2>
+                <nav id="multilevel-nav" class="multilevel-nav menu" role="navigation">
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Food</a>
+                        </li>
+                        <li>
+                            <a href="#">Classes
+                                <ul class="multilevel hidden">
+                                    <li>Sub Item 1</li>
+                                    <li>Sub Item 2</li>
+                                    <li>Sub Item 3</li>
+                                    <li>Sub Item 4</li>
+                                    <li>Sub Item 5</li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Recipes</a>
+                        </li>
+                        <li>
+                            <a href="#">News</a>
                         </li>
                     </ul>
                 </nav>
