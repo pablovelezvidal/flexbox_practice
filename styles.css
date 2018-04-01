@@ -1,3 +1,6 @@
+@import url('css/simple-menu.css'); 
+@import url('css/advanced-menu.css'); 
+
 body{
     margin:0;
     padding: 0;
@@ -42,7 +45,6 @@ header {
 }
 
 .menu li a {
-    display: block;
     text-decoration: none;
     color: white;
     padding: .6em 1em;
@@ -53,21 +55,3 @@ header {
     background-color: hsl(0, 0%, 25%);
 }
 
-/* Single nav Styles */
-.single-nav ul {
-    text-align: center;
-}
-
-@media screen and (min-width: 30em) {
-    /* Single nav Styles */
-    .single-nav ul{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .single-nav li {
-        flex: 1 0 auto;
-        text-align: center;
-    }
-}
