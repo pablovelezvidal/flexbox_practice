@@ -1,17 +1,36 @@
 /* Single nav Styles */
 .single-nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.single-nav ul li{
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.single-nav ul li a{
     text-align: center;
+    flex: 1 0 auto;
 }
 
 @media screen and (min-width: 30em) {
     /* Single nav Styles */
     .single-nav ul{
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
     }
 
     .single-nav li {
+        display: flex;
+        justify-content: space-between;
+        flex: 1 0 auto;
+    }
+
+    .single-nav li a{
         flex: 1 0 auto;
         text-align: center;
     }
