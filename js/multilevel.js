@@ -87,3 +87,42 @@ submenu.parentElement.querySelector('a').addEventListener("click", function (e) 
     });
 })();
 
+/* Repasando Observables */
+(() => {
+    var textoH3 = document.querySelector("#async-observables div.texto");
+    var boton = textoH3.parentElement.querySelector("#action");
+
+    const setTexto = texto => {
+        textoH3.textContent = texto;
+    }
+
+    const checkAuth = () => {
+        return Rx.Observable.create((observer) => {
+            setTexto("Verificando identidad...");
+            setTimeout(() => {
+                observer.next(true);
+            }, 2000);
+        })
+
+    };
+
+    const fetchName = () => {
+        return Rx.Observable.create((observer) => {
+            setTexto("Obteniendo el usuario...");
+            setTimeout(() => {
+                observer.next({nombre : "Pablo Andres Velez Vidal"});
+            }, 2000);
+        })
+    }
+
+    Rx.Observable.fromEvent(boton, 'click')
+        .switchMap( event => checkAuth())
+        .switchMap( isAuth => {
+            if (isAuth) {
+                return fetchName();
+            }
+        })
+        .subscribe(user => {
+            setTexto(user.nombre)
+        })
+})();
