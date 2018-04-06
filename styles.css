@@ -1,11 +1,15 @@
 @import url('css/simple-menu.css'); 
 @import url('css/advanced-menu.css'); 
 @import url('css/multilevel.css');
+@import url('css/reset.css');
+@import url('css/typography.css');
+@import url('css/card-styles.css');
+@import url('css/holy-grail.css');
 
 body{
     margin:0;
     padding: 0;
-    background-color: hsl(0, 0%, 76%);
+    background-color: hsl(0, 0%, 91%);
 }
 h1,h2,h3,h4,h5 {
     margin: 0;
