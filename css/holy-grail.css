@@ -46,6 +46,32 @@
 }
 
 
+/* Flex styles */
+
+@media screen and (min-width: 40em) {
+	.outer-wrap {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.content {
+		display: flex;
+	}
+	
+	.main-area {
+		flex: 1 1 auto;
+	}
+
+	.post-content {
+		max-width: 40em;
+		margin: 0 auto;
+	}
+
+	.sidebar{
+		flex: 0 0 12em;
+	}
+}
+
 
 
 
