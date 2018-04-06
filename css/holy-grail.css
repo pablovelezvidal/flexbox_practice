@@ -16,6 +16,7 @@
 .sidebar {
 	padding: .5em 1.4em 1em;
 	background: hsl(0, 0%, 90%);
+	overflow: hidden;
 }
 
 .example-menu ul {
@@ -46,6 +47,36 @@
 }
 
 
+/* Sidebar switcher buttons */
+
+@media screen and (max-width: 40em) {
+    /* Hide switcher on small screens */
+    .sidebar-switcher {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 40em) {
+
+	.sidebar-switcher {
+		position: absolute;
+		right: 0;
+		padding: .4em 1em;
+		margin-top: -1em;
+	}
+
+	.sidebar-switcher a {
+		color: hsl(0, 70%, 67%);
+		padding-left: .4em;
+	}
+
+	.sidebar-switcher a:hover,
+	.sidebar-switcher a:focus {
+		color: hsl(0, 0%, 20%);
+	}
+}
+
+
 /* Flex styles */
 
 @media screen and (min-width: 40em) {
@@ -60,6 +91,7 @@
 	
 	.main-area {
 		flex: 1 1 auto;
+		order: 1;
 	}
 
 	.post-content {
@@ -67,10 +99,34 @@
 		margin: 0 auto;
 	}
 
-	.sidebar{
+	.sidebar {
 		flex: 0 0 12em;
+		order: 2;
+		transition: padding .5s ease, flex .5s ease, color .2s ease-in .3s;
+	}
+
+	.sidebar-left {
+		order: 0;
+	}
+
+	.no-sidebar {
+		flex-direction: column;
+	}
+
+	.hide {
+		flex: 0 0 0;
+		padding: 0;
+		color: hsl(0, 0%, 0%, 0);
+		transition: color .2s ease, flex .5s ease .3s, padding .5s ease .3s;
+	}
+
+	.hide a {
+		color: hsl(0, 0%, 0%, 0);
 	}
 }
+
+
+
 
 
 
