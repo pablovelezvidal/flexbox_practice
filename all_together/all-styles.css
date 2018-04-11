@@ -12,3 +12,5 @@ The primary stylesheet for the full demo web page. This sheet pulls in all the c
 @import url('CSS/nav-multi-level.css');
 @import url('CSS/nav-mixed.css');
 @import url('CSS/nav-social.css');
+@import url('CSS/card-styles.css');
+@import url('CSS/all-together.css');
